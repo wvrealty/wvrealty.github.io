@@ -178,6 +178,11 @@
             1200: {
                 slidesPerView: 3,
                 spaceBetween: 20
+            },
+
+            1500: {
+                slidesPerView: 4,
+                spaceBetween: 15
             }
         }
     });
@@ -212,6 +217,11 @@
             1200: {
                 slidesPerView: 3,
                 spaceBetween: 20
+            },
+
+            1500: {
+                slidesPerView: 5,
+                spaceBetween: 10
             }
         }
     });
