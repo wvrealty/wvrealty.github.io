@@ -293,111 +293,128 @@
                 <div class="row" data-aos="fade-up" data-aos-delay="100">
 
                     <div class="col-12">
-                        <form onsubmit="return validationContact()" id="form-contact" class="php-email-form">
+                        <form onsubmit="return validationContact()" id="form-contact" class="php-email-form">                          
+                            <div class="text-center py-2">
+                                <h4>Property Information</h4>
+                            </div>
+
+                            <label class="pt-3">This Property is For (La propiedad es para):</label>
+                            <div>
+                                <input type="radio" id="forRent" name="property" value="Rent" checked>
+                                <label for="forRent" class="pb-1">Rent (Alquiler)</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="forSale" name="property" value="Sale">
+                                <label for="forSale" class="pb-1">Sale (Venta)</label>
+                            </div>
+                            <div>   
+                                <input type="radio" id="forBoth" name="property" value="Rent to Own">
+                                <label for="forBoth" class="pb-3">Rent to Own (Alquiler con opción a compra)</label>
+                            </div>                        
+
                             <div class="row">
-                                <div class="text-center py-2">
-                                    <h3>Where is The Rental Located?</h3>
-                                </div>
-
                                 <div class="col-12 col-md-6 form-group">
-                                    <input type="text" name="street" class="form-control" id="streetContact"
-                                        placeholder="Street Address" required>
-                                </div>
-
-                                <div class="col-12 col-md-6 form-group">
+                                    <label for="bldg">Property Name (Nombre de la Propiedad):</label>
                                     <input type="text" class="form-control" name="bldg" id="bldgContact"
-                                        placeholder="Building Name">
+                                        placeholder="Answer">
+                                </div>
+
+                                <div class="col-12 col-md-6 form-group">
+                                    <label for="street">Street Address (Dirección):</label>
+                                    <input type="text" name="street" class="form-control" id="streetContact"
+                                        placeholder="Answer" required>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-3 col-sm-4 col-md-2 col-lg-2 col-xl-1 form-group">
+                                    <label for="unit">Apartment:</label>
                                     <input type="text" name="unit" class="form-control" id="unitContact"
-                                        placeholder="Apt">
+                                        placeholder="Answer">
                                 </div>
 
                                 <div class="col-9 col-sm-8 col-md-4 col-lg-4 col-xl-5 form-group">
-                                    <input type="text" name="city" class="form-control" id="cityContact"
-                                        placeholder="City" required>
+                                    <label for="city">City/County (Ciudad o Condado):</label>
+                                    <select name="city" class="form-control" id="cityContact">
+                                        <option value="">--Please choose an option--</option>
+                                        <optgroup label="New York">
+                                            <option value="Bronx">Bronx</option>
+                                            <option value="Kings">Brooklyn</option>
+                                            <option value="New York">New York</option>
+                                            <option value="Queens">Queens</option>
+                                            <option value="Richmond">Richmond</option>
+                                        </optgroup>
+                                        <optgroup label="Westchester">
+                                            <option value="Yonkers">Yonkers</option>
+                                            <option value="New Rochelle">New Rochelle</option>
+                                            <option value="Mount Vernon">Mount Vernon</option>
+                                            <option value="White Plains">White Plains</option>
+                                            </optgroup>                                        
+                                        <option value="Other">Other</option>
+                                    </select>
                                 </div>
 
                                 <div class="col-9 col-md-4 col-lg-4 col-xl-4 form-group">
-                                    <input type="text" class="form-control" name="state" id="stateContact"
-                                        placeholder="State" required>
+                                    <label for="state">State (Estado):</label>
+                                    <input type="text" class="form-control" name="state" value="New York" id="stateContact"
+                                        placeholder="" readonly>
                                 </div>
 
                                 <div class="col-3 col-md-2 col-lg-2 col-xl-2 form-group">
-                                    <input type="number" class="form-control" name="zip" id="zipContact"
-                                        placeholder="Zip" required>
+                                    <label for="zip">ZIP Code:</label>
+                                    <input type="text" class="form-control" name="zip" id="zipContact"
+                                        placeholder="Answer" required>
                                 </div>
-
-
                             </div>
 
-                            <div class="row d-none d-lg-flex">
-                                <div class="col col-lg-3 col-xl-4 form-group">
-                                    <input type="text" name="rent" class="form-control" id="rentContact"
-                                        placeholder="Monthly Rent $">
-                                </div>
+                            <div class="form-group">
+                                <label for="comment">Comment (Comentario):</label>
+                                <textarea class="form-control" name="comment" id="commentContact" rows="4"
+                                    placeholder="Comment"></textarea>
+                            </div>
 
-                                <div class="col col-lg-2 col-xl-2 form-group">
-                                    <input type="number" class="form-control" name="beds" id="bedsContact"
-                                        placeholder="Beds #">
-                                </div>
-
-                                <div class="col col-lg-2 col-xl-2 form-group">
-                                    <input type="number" class="form-control" name="baths" id="bathsContact"
-                                        placeholder="Baths #" required>
-                                </div>
-
-                                <div class="col col-lg-3 col-xl-2 form-group">
-                                    <input type="text" class="form-control" name="petfriendly" id="petContact"
-                                        placeholder="Pet Friendly?">
-                                </div>
-
-                                <div class="col col-lg-2 col-xl-2 form-group">
-                                    <input type="text" class="form-control" name="elevator" id="elevatorContact"
-                                        placeholder="Elevator?">
-                                </div>
+                            <div class="text-center py-3">
+                                <h4>Your Contact Information</h4>
                             </div>
 
                             <div class="row d-block d-sm-flex">
-                                <div class="text-center py-2">
-                                    <h3>Your Contact Information</h3>
-                                </div>
-
-                                <div class="d-block d-md-flex  col form-group">
+                                <div class="col form-group">
+                                    <label for="name">Name (Nombre):</label>
                                     <input type="text" name="name" class="form-control" id="nameContact"
-                                        placeholder="Name" required>
+                                        placeholder="Answer" required>
                                 </div>
-
+                                
                                 <div class="col form-group">
+                                    <label for="phone">Phone Number (Número de teléfono):</label>
                                     <input type="text" class="form-control" name="phone" id="phoneContact"
-                                        placeholder="Phone ex: 999-999-9999" required>
+                                        placeholder="Enter this format 999-999-9999" required>
+                                </div>
+
+                                <div class="col form-group">
+                                    <label for="email">Email address:</label>
+                                    <input type="email" class="form-control" name="email" id="emailContact"
+                                        placeholder="Answer" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <div class="col form-group">
-                                    <input type="email" class="form-control" name="email" id="emailContact"
-                                        placeholder="Email" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
+                                <label for="subject">Subject (Asunto):</label>
                                 <input type="text" class="form-control" name="subject" id="subjectContact"
-                                    placeholder="Subject" value="I Would Like to List my Rental Property With WV Realty"
+                                    value="I Would Like to List My Property With WV Realty"
                                     required>
                             </div>
                             <div class="form-group">
+                                <label for="message">Message (Mensaje):</label>
                                 <textarea class="form-control" name="message" id="messageContact" rows="4"
                                     placeholder="Message" required></textarea>
                             </div>
                             <div class="form-group">
+                                <label for="spam">Please, how many days does a week have (Por favor, cuantos dias tiene una semana)?</label>
                                 <input type="text" class="form-control" name="spam" id="spam"
-                                    placeholder="Anti-Spam Question: # days in a week? (ex: 8)" required>
+                                    placeholder="Enter total in numbers" required>
                             </div>
                             <div class="my-3">
-                                <div class="loading">Loading</div>
+                                <div class="loading">Loading..</div>
                                 <div class="error-message"></div>
                                 <div class="sent-message">Your message has been sent. Thank you!</div>
                             </div>
@@ -634,12 +651,9 @@
                     "<br><b>Address:</b> " + document.getElementById('streetContact').value + "Apt # " +
                     document.getElementById('unitContact').value + " " + document.getElementById('cityContact').value +
                     " " + document.getElementById('stateContact').value + " " + document.getElementById('zipContact').value +
+                    "<br><b>Property for:</b> " + document.getElementById('property').value +
                     "<br><b>Building:</b> " + document.getElementById('bldgContact').value +
-                    "<br><b>Beds:</b> " + document.getElementById('bedsContact').value +
-                    "<br><b>Baths:</b> " + document.getElementById('bathsContact').value +
-                    "<br><b>Rent $</b> " + document.getElementById('rentContact').value +
-                    "<br><b>Pet Friendly:</b> " + document.getElementById('petContact').value +
-                    "<br><b>Elevator:</b> " + document.getElementById('elevatorContact').value +
+                    "<br><b>Comment:</b> " + document.getElementById('commentContact').value +
                     "<br><b>Message:</b> " + document.getElementById('messageContact').value
             }).then(
                 alert('Email was sent. Thank you for contacting us!')
