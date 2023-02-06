@@ -45,7 +45,7 @@
                             <li><a href="index.html#about" class="scrollto">WV Realty</a></li>
                             <li><a href="https://www.google.com/search?q=wv+realty+inc&sxsrf=AJOqlzUdKvZ7C8VkSKQrmcvGItFxpUc_nw%3A1674527720491&ei=6EPPY6vBHdGj5NoPtaCD-A8&gs_ssp=eJzj4tVP1zc0zDBJTk83STM1YLRSNaiwsEw2SjNNTjNJSTEAAkMrgwoTY4skA_PkREMLQyMz48Q0L97yMoWi1MSckkqFzLxkAJJaE8M&oq=WV+Re&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgAMgoILhCvARDHARBDMgUIABCABDIFCAAQgAQyCwgAEIAEELEDEIMBMgQIABBDMgUIABCABDILCAAQgAQQsQMQgwEyCwgAEIAEELEDEIMBMhEILhCABBCxAxCDARDHARCvATIFCAAQgAQ6CggAEEcQ1gQQsAM6BwgAELADEEM6EgguEMcBEK8BEMgDELADEEMYAToSCC4QxwEQ0QMQyAMQsAMQQxgBOgQIIxAnOgsILhCABBCxAxCDAToOCC4QgAQQsQMQxwEQ0QM6BQguEIAEOgoILhDHARCvARBDOggIABCxAxCDAToOCC4QgwEQ1AIQsQMQgAQ6CAguEIAEELEDOggILhCABBDUAjoLCC4QgAQQxwEQrwFKBAhBGABKBAhGGAFQ1Q9YpRpggidoAXABeACAAbEBiAHfA5IBAzQuMZgBAKABAcgBEcABAdoBBggBEAEYCA&sclient=gws-wiz-serp" target="_blank">Reviews</a></li>
                             <li><a href="index.html#team" class="scrollto">Agents</a></li>
-                            <li><a href="#contact" class="scrollto">Contact Us</a></li>
+                            <li><a href="index.html#contact" class="scrollto">Contact Us</a></li>
                             <li>
                                 <!-- Button trigger modal -->
                                 <a type="button" data-bs-toggle="modal" data-bs-target="#locationModal">
@@ -58,7 +58,7 @@
                     <li class="dropdown"><a href="#"><span>Customers</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="properties-viewing.html" class="scrollto">Apartment Viewing</a></li>
-                            <li><a href="apply.html">Rental Application - Apply Now!</a></li>
+                            <li><a href="apply.html">Apply Now</a></li>
                             <li><a href="pay.html" class="scrollto">Pay Fees</a></li>
                             <li><a href="index.html#guides" class="scrollto">Guides & Tools</a></li>
                             <li><a href="index.html#fair" class="scrollto">Fair Housing Notice</a></li>
@@ -262,80 +262,51 @@
                 </div>
 
                 <div class="row" data-aos="fade-up" data-aos-delay="100">
-                    <div class="col-lg-6">
-                        <div class="info-box mb-4">
-                            <i class="bx bx-map"></i>
-                            <h3>Our Address</h3>
-                            <p>2825 Third Avenue, Bronx, NY 10455</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="info-box  mb-4">
-                            <i class="bx bx-envelope"></i>
-                            <h3>Email Us</h3>
-                            <p>
-                                <a href="mailto:info@wvrealtyny.com">info@wvrealtyny.com</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="info-box  mb-4">
-                            <i class="bx bx-phone-call"></i>
-                            <h3>Call Us</h3>
-                            <p><a href="tel:3474438715">(347) 443-8715</a></p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row" data-aos="fade-up" data-aos-delay="100">
 
                     <div class="col-12">
-                        <form onsubmit="return validationContact()" id="form-contact" class="php-email-form">                          
+                        <form action="https://sheetdb.io/api/v1/gnwvo90p9tnqi" method="post" id="form-contact" class="php-email-form">                          
                             <div class="text-center py-2">
                                 <h4>Property Information</h4>
                             </div>
 
                             <label class="pt-3">This Property is For (La propiedad es para):</label>
                             <div>
-                                <input type="radio" id="forRent" name="property" value="Rent" checked>
+                                <input type="radio" id="forRent" name="data[for]" value="Rent" checked>
                                 <label for="forRent" class="pb-1">Rent (Alquiler)</label>
                             </div>
                             <div>
-                                <input type="radio" id="forSale" name="property" value="Sale">
+                                <input type="radio" id="forSale" name="data[for]" value="Sale">
                                 <label for="forSale" class="pb-1">Sale (Venta)</label>
                             </div>
                             <div>   
-                                <input type="radio" id="forBoth" name="property" value="Rent to Own">
+                                <input type="radio" id="forBoth" name="data[for]" value="RTO">
                                 <label for="forBoth" class="pb-3">Rent to Own (Alquiler con opción a compra)</label>
                             </div>                        
 
                             <div class="row">
                                 <div class="col-12 col-md-6 form-group">
                                     <label for="bldg">Property Name (Nombre de la Propiedad):</label>
-                                    <input type="text" class="form-control" name="bldg" id="bldgContact"
-                                        placeholder="Answer">
+                                    <input type="text" class="form-control" name="data[property_name]" id="bldgContact"
+                                        placeholder="Answer" autocomplete="off">
                                 </div>
 
                                 <div class="col-12 col-md-6 form-group">
                                     <label for="street">Street Address (Dirección):</label>
-                                    <input type="text" name="street" class="form-control" id="streetContact"
-                                        placeholder="Answer" required>
+                                    <input type="text" name="data[address]" class="form-control" id="streetContact"
+                                        placeholder="Answer" autocomplete="off" required>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-3 col-sm-4 col-md-2 col-lg-2 col-xl-1 form-group">
                                     <label for="unit">Apartment:</label>
-                                    <input type="text" name="unit" class="form-control" id="unitContact"
-                                        placeholder="Answer">
+                                    <input type="text" name="data[unit]" class="form-control" id="unitContact"
+                                        placeholder="Answer" autocomplete="off">
                                 </div>
 
                                 <div class="col-9 col-sm-8 col-md-4 col-lg-4 col-xl-5 form-group">
                                     <label for="city">City/County (Ciudad o Condado):</label>
-                                    <select name="city" class="form-control" id="cityContact">
+                                    <select name="data[city_county]" class="form-control" id="cityContact">
                                         <option value="">--Please choose an option--</option>
                                         <optgroup label="New York">
                                             <option value="Bronx">Bronx</option>
@@ -356,21 +327,21 @@
 
                                 <div class="col-9 col-md-4 col-lg-4 col-xl-4 form-group">
                                     <label for="state">State (Estado):</label>
-                                    <input type="text" class="form-control" name="state" value="New York" id="stateContact"
+                                    <input type="text" class="form-control" name="data[state]" value="NY" id="stateContact"
                                         placeholder="" readonly>
                                 </div>
 
                                 <div class="col-3 col-md-2 col-lg-2 col-xl-2 form-group">
                                     <label for="zip">ZIP Code:</label>
-                                    <input type="text" class="form-control" name="zip" id="zipContact"
-                                        placeholder="Answer" required>
+                                    <input type="text" class="form-control" name="data[zip]" id="zipContact"
+                                        placeholder="Answer" autocomplete="off" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="comment">Comment (Comentario):</label>
-                                <textarea class="form-control" name="comment" id="commentContact" rows="4"
-                                    placeholder="Comment"></textarea>
+                                <textarea class="form-control" name="data[comment]" id="commentContact" rows="4"
+                                    placeholder="Comment" autocomplete="off"></textarea>
                             </div>
 
                             <div class="text-center py-3">
@@ -380,45 +351,49 @@
                             <div class="row d-block d-sm-flex">
                                 <div class="col form-group">
                                     <label for="name">Name (Nombre):</label>
-                                    <input type="text" name="name" class="form-control" id="nameContact"
-                                        placeholder="Answer" required>
+                                    <input type="text" name="data[name]" class="form-control" id="nameContact"
+                                        placeholder="Answer" autocomplete="off" required>
                                 </div>
                                 
                                 <div class="col form-group">
                                     <label for="phone">Phone Number (Número de teléfono):</label>
-                                    <input type="text" class="form-control" name="phone" id="phoneContact"
-                                        placeholder="Enter this format 999-999-9999" required>
+                                    <input type="text" class="form-control" name="data[phone]" id="phoneContact"
+                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Enter this format 999-999-9999" autocomplete="off" required>
                                 </div>
 
                                 <div class="col form-group">
                                     <label for="email">Email address:</label>
-                                    <input type="email" class="form-control" name="email" id="emailContact"
-                                        placeholder="Answer" required>
+                                    <input type="email" class="form-control" name="data[email]" id="emailContact"
+                                        placeholder="Answer" autocomplete="off" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="subject">Subject (Asunto):</label>
-                                <input type="text" class="form-control" name="subject" id="subjectContact"
+                                <input type="text" class="form-control" name="data[subject]" id="subjectContact"
                                     value="I Would Like to List My Property With WV Realty"
                                     required>
                             </div>
                             <div class="form-group">
                                 <label for="message">Message (Mensaje):</label>
-                                <textarea class="form-control" name="message" id="messageContact" rows="4"
-                                    placeholder="Message" required></textarea>
+                                <textarea class="form-control" name="data[message]" id="messageContact" rows="4"
+                                    placeholder="Message" required autocomplete="off"></textarea>
                             </div>
-                            <div class="form-group">
-                                <label for="spam">Please, how many days does a week have (Por favor, cuantos dias tiene una semana)?</label>
-                                <input type="text" class="form-control" name="spam" id="spam"
-                                    placeholder="Enter total in numbers" required>
+                            
+                            <div class="col-9 col-sm-8 col-md-4 col-lg-4 col-xl-5 form-group">
+                                <label for="spam">Security question:</label>
+                                <select name="spam" class="form-control" id="spamDropDown" autocomplete="off" onchange="checkOption()">
+                                    <option value="bot">--Please choose an option--</option>
+                                    <optgroup label="Are you a robot?">
+                                        <option value="KbV7DQA86h6skX">I am not a Robot</option>
+                                    </optgroup>                                  
+                                </select>
+                                <input type="hidden" id="source" name="data[source]" value="web-owner">
                             </div>
-                            <div class="my-3">
-                                <div class="loading">Loading..</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                            <div class="text-center">
+                                <button id="btn_send" type="submit">Send Message</button>
                             </div>
-                            <div class="text-center"><button type="submit">Send Message</button></div>
                         </form>
                     </div>
 
@@ -440,8 +415,9 @@
                         <p>Join to receive email updates on new apartment vacancies, special promotions, and more.</p>
                     </div>
                     <div class="col-lg-6">
-                        <form onsubmit="return validationSubscribe()">
-                            <input type="email" id="emailSubscribe" name="email"><input type="submit" value="Subscribe">
+                        <form action="https://sheetdb.io/api/v1/1mp34elvk66ix" method="post" id="sheetdb-form">
+                            <input type="email" placeholder="Email" id="emailSubscribe" name="data[email]" autocomplete="off">
+                            <input type="submit" value="Subscribe">
                         </form>
                     </div>
                 </div>
@@ -455,11 +431,10 @@
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="properties-viewing.html">Apartment
-                                    Viewing</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="apply.html">Rental
-                                    Application - Apply Now</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="properties-viewing.html">Apartment Viewing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="apply.html">Apply Now</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Owners - List With Us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#guides">Guides & Tools</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="index.html#faq">Frequently Asked
                                     Questions</a></li>
                         </ul>
@@ -469,9 +444,8 @@
                         <h4>The Company</h4>
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a href="index.html#about">About us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.html#team">Agents</a></li>
-                            </li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Owners - List With Us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.html#team">Agents</a></li></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.html#contact">Contact Us</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="terms.html">Terms & Conditions</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="privacy.html">Privacy Policy</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="housing.html">Fair Housing Policy</a></li>
@@ -481,8 +455,8 @@
                         </ul>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 footer-contact">
-                        <h4>Contact Us</h4>
+                    <div class="col-lg-3 col-md-6 footer-contact footer-info">
+                        <h4>WV Realty Inc.</h4>
                         <p>
                             2825 Third Avenue <br>
                             Bronx, NY 10455<br>
@@ -493,7 +467,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-info">
-                        <h3>About Us Inc.</h3>
+                        <h3>Follow</h3>
                         <p>WV Realty Inc. is a local based brokerage specialized in the rent of buildings apartments
                             units and private houses in The Bronx, Brooklyn, Manhattan, Queens, New Rochelle, and Mount
                             Vernon.</p>
@@ -556,8 +530,59 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Send Email From Javascripts-->
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- Send Contact Info to Google Sheets prospects_2023 -->
+    <script>
+        var form = document.getElementById('form-contact');
+        var dropDown = document.getElementById("spamDropDown");
+    
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            // This will fire if is not a bots
+            if (dropDown.value == "KbV7DQA86h6skX") {
+                fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(document.getElementById("form-contact")),
+                }).then(
+                    response => response.json()
+                ).then(
+                    alert('Email was sent. Thank you for contacting us!'),
+                    refresh()                
+                )
+            } else {
+                alert('Email was no sent. Please answer the security question.');
+            };
+        });
+
+        function refresh() {
+            setTimeout(function () {
+                location.reload()
+            }, 100);
+        }
+    </script>
+
+    <!-- Send Email Subcribers Info to Google Sheets email_subscribers -->
+    <script>
+        var form1 = document.getElementById('sheetdb-form');
+    
+        form1.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form1.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("sheetdb-form")),
+            }).then(
+                response => response.json()
+            ).then(
+                alert('Email subscribed!. Thank you for Joining us!'),
+                refresh()                
+            );
+        });
+
+        function refresh() {
+            setTimeout(function () {
+                location.reload()
+            }, 100);
+        }
+    </script>
 
     <!-- Vendor JS Files -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -588,105 +613,6 @@
                 var trigger = document.querySelector('.nav-tabs a[href="#' + current_hash + '"]');
                 if (trigger) trigger.click();
             }
-        }
-    </script>
-
-    <!--Email smpt javascript-->
-    <script>
-        function validationContact() {
-            var name = document.getElementById("nameContact").value;
-            var phone = document.getElementById("phoneContact").value;
-            var email = document.getElementById("emailContact").value;
-            var subject = document.getElementById("subjectContact").value;
-            var message = document.getElementById("messageContact").value;
-            var spam = document.getElementById("spam").value;
-
-            if (name.length < 3) {
-                alert("Please complete your name.");
-                return false;
-            }
-
-            if (isNaN(phone.replace(/-/g, "")) || phone.length < 12) {
-                alert("Invalid phone number, please included the delimiter -");
-                return false;
-            }
-
-            if (email.indexOf("@") == -1 || email.length < 6) {
-                alert("Invalid email address.");
-                return false;
-            }
-
-            if (subject.length <= 5) {
-                alert("Please complete the subject of your email.");
-                return false;
-            }
-
-            if (message.length <= 1) {
-                alert("Please complete the message of your email.");
-                return false;
-            }
-
-            if (spam != 7) {
-                alert("Invalid answer for anti-spam question, please verify.");
-                return false;
-            }
-
-            sendEmailContact();
-
-            return true;
-        }
-    </script>
-
-    <script>
-        function sendEmailContact() {
-            Email.send({
-                name: document.getElementById('nameContact').value,
-                SecureToken: "d803ae6f-e1cf-42ac-ae0a-8704e5843863",
-                To: 'rentals@wvrealtyny.com',
-                From: document.getElementById('emailContact').value,
-                Subject: "Landlord / Owner from wvrealtyny.com - Name: " + document.getElementById('nameContact')
-                    .value +
-                    "  Phone: " + document.getElementById('phoneContact').value + " -> " + document.getElementById('subjectContact').value,
-                Body: "<b>Listing Info:</b>" +
-                    "<br><b>Address:</b> " + document.getElementById('streetContact').value + "Apt # " +
-                    document.getElementById('unitContact').value + " " + document.getElementById('cityContact').value +
-                    " " + document.getElementById('stateContact').value + " " + document.getElementById('zipContact').value +
-                    "<br><b>Property for:</b> " + document.getElementById('property').value +
-                    "<br><b>Building:</b> " + document.getElementById('bldgContact').value +
-                    "<br><b>Comment:</b> " + document.getElementById('commentContact').value +
-                    "<br><b>Message:</b> " + document.getElementById('messageContact').value
-            }).then(
-                alert('Email was sent. Thank you for contacting us!')
-            );
-        }
-    </script>
-
-    <script>
-        function validationSubscribe() {
-            var email = document.getElementById("emailSubscribe").value;
-
-            if (email.indexOf("@") == -1 || email.length < 6) {
-                alert("Invalid email address.");
-                return false;
-            }
-
-            sendEmailSubscribe();
-
-            return true;
-        }
-    </script>
-
-    <script>
-        function sendEmailSubscribe() {
-            Email.send({
-                SecureToken: "d803ae6f-e1cf-42ac-ae0a-8704e5843863",
-                To: 'info@wvrealtyny.com',
-                From: document.getElementById('emailSubscribe').value,
-                Subject: "New Subscriber from wvrealtyny.com: " + document.getElementById('emailSubscribe').value,
-                Body: "Please add me to your emailing list."
-            }).then(
-                alert('Email was sent. Thank you for contacting us!')
-            );
         }
     </script>
 
