@@ -266,10 +266,9 @@
                                 </div>
     
                                 <div class="col form-group">
-                                    <label for="spam"><b>Security Question: Are you a human? (yes):</b></label>
-                                    <input type="text" class="form-control" id="spamQuestion" onchange="checkOption()" 
-                                        placeholder="Answer" autocomplete="off">
-                                    
+                                    <label for="questionSec"><b>Anti-Spam Question: Days in a week (ex: 8)?</b></label>
+                                    <input type="text" class="form-control" id="questionSec" placeholder="Answer" autocomplete="off">
+
                                     <input type="hidden" id="source" name="data[source]" value="web-inquiry">
                                     <input type="hidden" id="subject" name="data[subject]" value="Apartment Inquiry">
                                 </div>
@@ -417,12 +416,12 @@
     <!-- Send Contact Info to Google Sheets prospects_2023 -->
     <script>
         var form = document.getElementById('form-contact');
-        var answer = document.getElementById("spamQuestion");
+        var answer = document.getElementById("questionSec");
     
         form.addEventListener("submit", e => {
             e.preventDefault();
             // This will fire if is not a bots
-            if (answer.value == "yes") {
+            if (answer.value == "7") {
                 fetch(form.action, {
                     method: "POST",
                     body: new FormData(document.getElementById("form-contact")),
