@@ -57,8 +57,6 @@
 
                     <li class="dropdown"><a href="#"><span>Customers</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="properties-viewing.html" class="scrollto">Apartment Viewing</a></li>
-                            <li><a href="apply.html">Apply Now</a></li>
                             <li><a href="pay.html" class="scrollto">Pay Fees</a></li>
                             <li><a href="index.html#guides" class="scrollto">Guides & Tools</a></li>
                             <li><a href="index.html#fair" class="scrollto">Fair Housing Notice</a></li>
@@ -66,10 +64,16 @@
                         </ul>
                     </li>
 
+                    <li class="dropdown"><a href="#"><span>Rentals</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="properties-viewing.html">Schedule a Tour</a></li>
+                            <li><a href="apply.html">Apply Now</a></li>
+                        </ul>
+                    </li>
+
                     <li><a class="nav-link scrollto" href="#" class="scrollto">List With Us!</a></li>
 
-                    <li><a class="nav-link scrollto" href="properties-viewing.html" class="scrollto">Book an 
-                            Appointment</a></li>
+                    <li><a class="nav-link scrollto" href="inquiry.html" class="scrollto">Check Availability</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -120,7 +124,7 @@
         <div class="container text-center text-md-left" data-aos="fade-up">
             <h1>Why List With <span>Us</span></h1>
             <h2>Your property will receive unique and powerful marketing services!</h2>
-            <a href="http://api.realbird.com/pdf/pro.aspx?t=we_are_realbird_pro&rb_id=B7Q2J2D9" target="_blank"
+            <a href="./docs/New_Branding_NY_Seller_Benefits_Flyer.pdf" target="_blank"
                 class="primary-btn rounded-0">Learn More</a>
         </div>
     </section><!-- End Hero -->
@@ -202,7 +206,7 @@
                         <h3>Our Listing Syndication Network</h3>
                         <p class="fst-italic">
                             See below the list of the real estate portals and sites that we use for reaching
-                            prospective apartment renters with our RealBird PRO online marketing platform.
+                            prospectives buyers and renters with our NY State MLS online marketing platform.
                         </p>
                         <ul>
                             <li><i class="bi bi-check"></i> Zillow.com
@@ -271,7 +275,7 @@
 
                             <label class="pt-3">This Property is For (La propiedad es para):</label>
                             <div>
-                                <input type="radio" id="forRent" name="data[for]" value="Rent" checked>
+                                <input type="radio" id="forRent" name="data[for]" value="Rent" checked="checked">
                                 <label for="forRent" class="pb-1">Rent (Alquiler)</label>
                             </div>
                             <div>
@@ -307,7 +311,7 @@
                                 <div class="col-9 col-sm-8 col-md-4 col-lg-4 col-xl-5 form-group">
                                     <label for="city">City/County (Ciudad o Condado):</label>
                                     <select name="data[city_county]" class="form-control" id="cityContact">
-                                        <option value="">--Please choose an option--</option>
+                                        <option value="" disabled selected>--Please choose an option--</option>
                                         <optgroup label="New York">
                                             <option value="Bronx">Bronx</option>
                                             <option value="Kings">Brooklyn</option>
@@ -338,16 +342,6 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label for="comment">Comment (Comentario):</label>
-                                <textarea class="form-control" name="data[comment]" id="commentContact" rows="4"
-                                    placeholder="Comment" autocomplete="off"></textarea>
-                            </div>
-
-                            <div class="text-center py-3">
-                                <h4>Your Contact Information</h4>
-                            </div>
-
                             <div class="row d-block d-sm-flex">
                                 <div class="col form-group">
                                     <label for="name">Name (Nombre):</label>
@@ -368,29 +362,28 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label for="subject">Subject (Asunto):</label>
-                                <input type="text" class="form-control" name="data[subject]" id="subjectContact"
-                                    value="I Would Like to List My Property With WV Realty"
-                                    required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message (Mensaje):</label>
-                                <textarea class="form-control" name="data[message]" id="messageContact" rows="4"
-                                    placeholder="Message" required autocomplete="off"></textarea>
+                            <div class="row d-block d-sm-flex">
+                                <div class="col form-group">
+                                    <label for="subject">Subject (Asunto):</label>
+                                    <input type="text" class="form-control" name="data[subject]" id="subjectContact"
+                                        value="I Would Like to List My Property With WV Realty" readonly>
+                                </div>
+
+                                <div class="col form-group">
+                                    <label for="message">Message (Mensaje):</label>
+                                    <textarea class="form-control" name="data[message]" id="messageContact" rows="4"
+                                        placeholder="message" autocomplete="off"></textarea>
+                                </div>
+
+                                <div class="col form-group">
+                                    <label for="spam"><b>Security Question: Are you a human? (yes):</b></label>
+                                    <input type="text" class="form-control" id="spamQuestion" placeholder="Answer" autocomplete="off">
+
+                                    <input type="hidden" id="source" name="data[source]" value="web-owner">
+                                </div>
+    
                             </div>
                             
-                            <div class="col-9 col-sm-8 col-md-4 col-lg-4 col-xl-5 form-group">
-                                <label for="spam">Security question:</label>
-                                <select name="spam" class="form-control" id="spamDropDown" autocomplete="off" onchange="checkOption()">
-                                    <option value="bot">--Please choose an option--</option>
-                                    <optgroup label="Are you a robot?">
-                                        <option value="KbV7DQA86h6skX">I am not a Robot</option>
-                                    </optgroup>                                  
-                                </select>
-                                <input type="hidden" id="source" name="data[source]" value="web-owner">
-                            </div>
-
                             <div class="text-center">
                                 <button id="btn_send" type="submit">Send Message</button>
                             </div>
@@ -487,7 +480,7 @@
                         </div>
 
                         <div class="text-start my-4">
-                            <a href="">
+                            <a href="https://www.nystatemls.com/profiles/ny/bronx/wv-realty-inc/walny-valdez/157957/" target="_blank">
                                 <img src="img/logos/NYSMLS-logo-silver.png"
                                     alt="NYSMLS - logo" width="250" />
                             </a>
@@ -533,12 +526,12 @@
     <!-- Send Contact Info to Google Sheets prospects_2023 -->
     <script>
         var form = document.getElementById('form-contact');
-        var dropDown = document.getElementById("spamDropDown");
+        var answer = document.getElementById("spamQuestion");
     
         form.addEventListener("submit", e => {
             e.preventDefault();
             // This will fire if is not a bots
-            if (dropDown.value == "KbV7DQA86h6skX") {
+            if (answer.value == "yes") {
                 fetch(form.action, {
                     method: "POST",
                     body: new FormData(document.getElementById("form-contact")),

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Pay Fees | WV Realty Inc.</title>
+    <title>Check Availability| WV Realty Inc.</title>
 
     <!-- shortcut logo icon -->
     <link rel="shortcut icon" href="img/logos/wv-logo-transparent.png">
@@ -57,7 +57,7 @@
 
                     <li class="dropdown"><a href="#"><span>Customers</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="#" class="scrollto">Pay Fees</a></li>
+                            <li><a href="pay.html" class="scrollto">Pay Fees</a></li>
                             <li><a href="index.html#guides" class="scrollto">Guides & Tools</a></li>
                             <li><a href="index.html#fair" class="scrollto">Fair Housing Notice</a></li>
                             <li><a href="index.html#faq" class="scrollto">F.A.Q.</a></li>
@@ -73,7 +73,7 @@
 
                     <li><a class="nav-link scrollto" href="owners.html" class="scrollto">List With Us!</a></li>
 
-                    <li><a class="nav-link scrollto" href="inquiry.html" class="scrollto">Check Availability</a></li>
+                    <li><a class="nav-link scrollto" href="#" class="scrollto">Check Availability</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -120,11 +120,11 @@
         </div>
     </div>
     <!-- ======= Hero Section ======= -->
-    <section id="herosub-pay" class="herosub d-flex flex-column justify-content-center align-items-center">
+    <section id="herosub-pv" class="herosub d-flex flex-column justify-content-center align-items-center">
         <div class="container text-center text-md-left" data-aos="fade-up">
-            <h1>Pay <span>Fees</span></h1>
-            <h2>Online Payments</h2>
-            <a href="https://www.zellepay.com/" target="_blank" class="primary-btn rounded-0">Get Started</a>
+            <h1>Check <span>Availability</span></h1>
+            <h2>Search for the property you're aiming for</h2>
+            <a href="#contact" class="primary-btn rounded-0">Learn More</a>
         </div>
     </section><!-- End Hero -->
 
@@ -134,185 +134,158 @@
             <div class=" container">
 
                 <div class="d-flex justify-content-between align-items-center">
-                    <h2>Pay Apartment Fees</h2>
+                    <h2>Check Availability</h2>
                     <ol>
                         <li><a href="index.html">Home</a></li>
-                        <li>Pay Fees</li>
+                        <li>Rent an Apartment</li>
                     </ol>
                 </div>
 
             </div>
         </section><!-- End About Us Section -->
 
-        <!-- ======= Properties Section ======= -->
-        <section class="features section-bg py-5">
-            <div class="container">
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact py-5">
+            <div class="container" data-aos="fade-up">
+
                 <div class="section-title">
-                    <h2>Send Payments with Zelle®</h2>
-                    <p>WV Realty quickly receive or send payments with Zelle®</p>
+                    <h2>Rent An Apartment</h2>
+                    <p>Where applicable, please fill out the form below to the best of your ability. If we have something that meets your criteria one of our agents will reach out to you.</p>
                 </div>
 
-                <div class="row py-2 align-items-center" data-aos="fade-up">
-                    <div class="col-md-5">
-                        <img src="img/features-7.jpg" class="img-fluid" alt="">
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+                    <div class="col-12">
+                        <form action="https://sheetdb.io/api/v1/gnwvo90p9tnqi" method="post" id="form-contact" class="php-email-form">                          
+                            <div class="text-center py-4">
+                                <h4><b>Apartment Inquiry Form</b></h4>
+                            </div>
+
+                            <div class="row d-block d-sm-flex">
+                                <div class="col form-group">
+                                    <label for="name"><b>Name (Nombre):</b></label>
+                                    <input type="text" name="data[name]" class="form-control" id="nameContact"
+                                        placeholder="Answer" autocomplete="off" required>
+                                </div>
+                                
+                                <div class="col form-group">
+                                    <label for="phone"><b>Phone number (Número de teléfono):</b></label>
+                                    <input type="text" class="form-control" name="data[phone]" id="phoneContact"
+                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Enter this format 999-999-9999" autocomplete="off" required>
+                                </div>
+
+                                <div class="col form-group">
+                                    <label for="email"><b>Email address:</b></label>
+                                    <input type="email" class="form-control" name="data[email]" id="emailContact"
+                                        placeholder="Answer" autocomplete="off" required>
+                                </div>
+                            </div>
+                            <div class="row d-block d-sm-flex">
+                                <div class="col form-group">
+                                    <label class="pt-1"><b>Proposed Move Date? (Cuándo deseas mudarte?):</b></label>
+                                    <div>
+                                        <input type="radio" id="7-days" name="data[move_date]" value="7" checked>
+                                        <label for="7-days" class="pb-1">in 7 business days (en 7 días laborables)</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="15-days" name="data[move_date]" value="15" autocomplete="off">
+                                        <label for="15-days" class="pb-1">in 15 days or less (en 15 días o menos)</label>
+                                    </div>
+                                    <div>   
+                                        <input type="radio" id="30-days" name="data[move_date]" value="30" autocomplete="off">
+                                        <label for="30-days" class="pb-1">in 30 days or less (en 30 días o menos)</label>
+                                    </div>  
+                                </div>
+
+                                <div class="col form-group">
+                                    <label for="beds"><b>How many bedrooms? (De cuántos dormitorios?)</b></label>
+                                    <select name="data[beds]" class="form-control" id="bedContact">
+                                        <option value="" selected disabled>--Please choose an option--</option>
+                                        <option value="Studio">Studio</option>
+                                        <option value="1">1 Bedroom</option>
+                                        <option value="2">2 Bedrooms</option>
+                                        <option value="3">3 Bedrooms</option>
+                                        <option value="4+">4+ Bedrooms</option>
+                                        <option value="Any">Any where the asking rent is within my budget</option>
+                                    </select>
+                                </div>
+
+                                <div class="col form-group">
+                                    <label for="pets"><b>Do you have any pets? (Tienes mascotas?)</b></label>
+                                    <select name="data[pets]" class="form-control" id="petContact">
+                                        <option value="" selected disabled>--Please choose an option--</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="Wish">Wish to have</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row d-block d-sm-flex">
+                                <div class="col form-group">
+                                    <label for="rent_budget"><b>What is your monthly rent budget? (Presupuesto de renta mensual?)</b></label>
+                                    <input type="text" name="data[rent_budget]" class="form-control" id="budgetContact"
+                                        placeholder="Answer" autocomplete="off" required>
+                                </div>
+
+                                <div class="col form-group">
+                                    <label for="income"><b>What is the yearly household income? (Ingreso anual familiar?)</b></label>
+                                    <input type="text" class="form-control" name="data[income]" id="incomeContact"
+                                        placeholder="Answer" autocomplete="off">
+                                </div>
+
+                                <div class="col form-group">
+                                    <label for="credit_score"><b>Credit score of each adult? (Puntaje de credito por adulto?)</b></label>
+                                    <input type="text" name="data[credit_score]" class="form-control" id="creditContact"
+                                        placeholder="Answer" autocomplete="off" required>
+                                </div>
+                            </div>
+
+                            <div class="row d-block d-sm-flex">
+                                <div class="col form-group">
+                                    <label for="cash_or_voucher"><b>Will you be using rental assistance or program? (Tienes asistencia para el pago de la renta?)</b></label>
+                                    <select name="data[cash_or_voucher]" class="form-control" id="voucherContact">
+                                        <option value="" selected disabled>--Please choose an option--</option>
+                                        <optgroup label="No">
+                                            <option value="No">Cash</option>
+                                        </optgroup>
+                                        <optgroup label="Yes">
+                                            <option value="Section 8">Section 8</option>
+                                            <option value="CityFheps">CityFheps</option>
+                                            <option value="Fheps">Fheps</option>
+                                            <option value="HRA/HASA">HRA/HASA</option>
+                                            <option value="SOTA">SOTA</option>
+                                            <option value="Other">Other - Please specify in comment box</option>    
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <div class="col form-group">
+                                    <label for="message"><b>Comment (Comentario):</b></label>
+                                    <textarea class="form-control" name="data[message]" id="messageContact" rows="4"
+                                        placeholder="If you have a voucher, please share the voucher amount or bedroom amount." autocomplete="off"></textarea>
+                                </div>
+    
+                                <div class="col form-group">
+                                    <label for="spam"><b>Security Question: Are you a human? (yes):</b></label>
+                                    <input type="text" class="form-control" id="spamQuestion" onchange="checkOption()" 
+                                        placeholder="Answer" autocomplete="off">
+                                    
+                                    <input type="hidden" id="source" name="data[source]" value="web-inquiry">
+                                    <input type="hidden" id="subject" name="data[subject]" value="Apartment Inquiry">
+                                </div>
+                                
+                            </div>
+
+                            <div class="text-center">
+                                <button id="btn_send" type="submit">Send Message</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="col-md-7 pt-3">
-                        <h3>How to send money with Zelle®</h3>
-                        <p class="fst-italic">
-                            Zelle® is a fast and free (U.S. checking or savings account required to use Zelle®.
-                            Transactions between enrolled consumers typically occur in minutes and generally do not
-                            incur transaction fees.) way to send and receive money with the people you know and trust.
-                            You can find Zelle® in the banking app of hundreds of banks and credit unions nationwide.
-                            Send money straight from your banking app for all sorts of things – even if your recipient
-                            has a different U.S.-based bank or credit union.
-                        </p>
-                        <ul>
-                            <li><i class="bi bi-check"></i> <b>Access Zelle®</b>
-                                <ul>
-                                    <li> <i class="bi bi-check-circle-fill"></i> <span class="fst-italic">Get started by
-                                            enrolling your email or U.S. mobile number through your mobile banking app
-                                            or with the Zelle® app.</span>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><i class="bi bi-check"></i> <b>Pick a Person to Pay</b>
-                                <ul>
-                                    <li> <i class="bi bi-check-circle-fill"></i> <span class="fst-italic">Enter the
-                                            preferred email address or U.S. mobile number of the recipient. You can send
-                                            money to almost anyone1 you know and trust with a bank account in the U.S.
-                                        </span>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><i class="bi bi-check"></i> <b>Choose the Amount</b>
-                                <ul>
-                                    <li> <i class="bi bi-check-circle-fill"></i> <span class="fst-italic">Enter the
-                                            amount to send. Your recipient gets a notification explaining how to
-                                            complete the payment, simply and quickly.</span>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><i class="bi bi-check"></i> <b>Secure</b>
-                                <ul>
-                                    <li> <i class="bi bi-check-circle-fill"></i> <span class="fst-italic">Your account
-                                            information stays protected - you won't see the other person's bank account
-                                            info, and they won't see yours.</span>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="text-center py-3">
-                            <a href="https://www.zellepay.com/" target="_blank" class="primary-btn rounded-0">Get
-                                Started</a>
-                        </div>
-
-                    </div>
-
-
 
                 </div>
-
-
 
             </div>
-        </section>
-
-
-        <section id="viewing" class="faq section-bg py-2">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Frequently Asked Questions</h2>
-                    <p>Answers to the most common questions</p>
-                </div>
-
-
-                <div class="row justify-content-center">
-
-                    <div class="col-xl-12 py-4">
-                        <ul class="faq-list">
-                            <li>
-                                <div data-bs-toggle="collapse" class="collapsed question" href="#faq0">Application
-                                    Fee?<i class="bi bi-chevron-down icon-show"></i><i
-                                        class="bi bi-chevron-up icon-close"></i></div>
-                                <div id="faq0" class="collapse" data-bs-parent=".faq-list">
-                                    <p>
-                                        Application fees for an apartment are limited to fees for background checks and
-                                        credit checks, and now cannot exceed $20. The $20 limitation applies to licensed
-                                        real estate brokers and salespeople acting as an agent of the "landlord, lessor,
-                                        sub-lessor or grantor".
-                                    </p>
-                                </div>
-                            </li>
-
-
-                            <li>
-                                <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">What is Zelle®?<i
-                                        class="bi bi-chevron-down icon-show"></i><i
-                                        class="bi bi-chevron-up icon-close"></i></div>
-                                <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                                    <p>
-                                        Zelle® is an easy way to send money directly between almost any U.S. bank
-                                        accounts typically within minutes. With just an email address or mobile phone
-                                        number, you can quickly, safely and easily send and receive money with more
-                                        people, regardless of where they bank.
-                                    </p>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Are there any
-                                    fees to send money using Zelle®?<i class="bi bi-chevron-down icon-show"></i><i
-                                        class="bi bi-chevron-up icon-close"></i></div>
-                                <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                                    <p>
-                                        Zelle® doesn’t charge a fee to send or receive money. We recommend confirming
-                                        with your bank or credit union that there are no additional fees.
-                                    </p>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Can I access
-                                    Zelle® to send or receive money without a smartphone?<i
-                                        class="bi bi-chevron-down icon-show"></i><i
-                                        class="bi bi-chevron-up icon-close"></i></div>
-                                <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                                    <p>
-                                        If your bank or credit union offers Zelle®, you may be able to use their online
-                                        banking site to send and receive money without a mobile device.
-                                        If your bank or credit union does not offer Zelle®, then you must have a
-                                        smartphone in order to access the Zelle® app to send and receive money.
-                                    </p>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Can I cancel a
-                                    payment?<i class="bi bi-chevron-down icon-show"></i><i
-                                        class="bi bi-chevron-up icon-close"></i></div>
-                                <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                                    <p>
-                                        You can only cancel a payment if the recipient hasn’t yet enrolled with Zelle®.
-                                        You can go to your activity page within the Zelle® experience, either within
-                                        your mobile banking app or the Zelle® app, choose the payment you want to
-                                        cancel, and then select “Cancel This Payment.”
-                                        If your recipient has already enrolled with Zelle®, the money is sent directly
-                                        to your recipient’s bank account and cannot be canceled.
-                                    </p>
-                                </div>
-                            </li>
-
-                        </ul>
-                    </div>
-
-                    <h5 class="text-center general-links pb-5">
-                        Would You Like to Book an Apartment Viewing?<a href="properties-viewing.html">
-                            Click Here!</a>
-                    </h5>
-
-                </div>
-            </div>
-        </section><!-- End Just Listed Section -->
+        </section><!-- End Contact Section -->
 
     </main>
 
@@ -343,11 +316,10 @@
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="properties-viewing.html">Apartment
-                                    Viewing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="properties-viewing.html">Apartment Viewing</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="apply.html">Apply Now</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="owners.html">Owners - List With Us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.html#guides">Guides & Tools</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Owners - List With Us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#guides">Guides & Tools</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="index.html#faq">Frequently Asked
                                     Questions</a></li>
                         </ul>
@@ -357,7 +329,7 @@
                         <h4>The Company</h4>
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a href="index.html#about">About us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.html#team">Agents</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.html#team">Agents</a></li></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="index.html#contact">Contact Us</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="terms.html">Terms & Conditions</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="privacy.html">Privacy Policy</a></li>
@@ -369,7 +341,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-contact footer-info">
-                        <h4>Contact Us</h4>
+                        <h4>WV Realty Inc.</h4>
                         <p>
                             2825 Third Avenue <br>
                             Bronx, NY 10455<br>
@@ -377,11 +349,10 @@
                             <strong>Phone:</strong> (347) 443-8715<br>
                             <strong>Email:</strong> info@wvrealtyny.com<br>
                         </p>
-
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-info">
-                        <h3>About Us Inc.</h3>
+                        <h3>Follow</h3>
                         <p>WV Realty Inc. is a local based brokerage specialized in the rent of buildings apartments
                             units and private houses in The Bronx, Brooklyn, Manhattan, Queens, New Rochelle, and Mount
                             Vernon.</p>
@@ -443,7 +414,37 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
-            <!-- Send Email Subcribers Info to Google Sheets email_subscribers -->
+    <!-- Send Contact Info to Google Sheets prospects_2023 -->
+    <script>
+        var form = document.getElementById('form-contact');
+        var answer = document.getElementById("spamQuestion");
+    
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            // This will fire if is not a bots
+            if (answer.value == "yes") {
+                fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(document.getElementById("form-contact")),
+                }).then(
+                    response => response.json()
+                ).then(
+                    alert('Email was sent. Thank you for contacting us!'),
+                    refresh()                
+                )
+            } else {
+                alert('Email was no sent. Please answer the security question.');
+            };
+        });
+
+        function refresh() {
+            setTimeout(function () {
+                location.reload()
+            }, 100);
+        }
+    </script>
+
+    <!-- Send Email Subcribers Info to Google Sheets email_subscribers -->
     <script>
         var form1 = document.getElementById('sheetdb-form');
     
@@ -466,7 +467,7 @@
             }, 100);
         }
     </script>
-    
+
     <!-- Vendor JS Files -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -482,7 +483,6 @@
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="../node_modules/glightbox/dist/js/glightbox.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     <!-- Custom JS -->
     <script src="js/main.js"></script>
 
