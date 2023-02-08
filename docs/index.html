@@ -599,7 +599,7 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <form action="https://sheetdb.io/api/v1/gnwvo90p9tnqi" method="post" id="form-contact" class="php-email-form">
+                        <form action="https://sheetdb.io/api/v1/gnwvo90p9tnqi" method="post" id="leads_form" class="php-email-form">
                             <div class="row d-block d-md-flex">
                                 <div class="col form-group">
                                     <label for="name">Name (Nombre):</label>
@@ -779,7 +779,7 @@
     
     <!-- Send Contact Info to Google Sheets prospects_2023 -->     
     <script>
-        var form = document.getElementById('form-contact');
+        var form = document.getElementById('leads_form');
         var answer = document.getElementById("questionSec");
     
         form.addEventListener("submit", e => {
@@ -788,7 +788,7 @@
             if (answer.value == "7") {
                 fetch(form.action, {
                     method: "POST",
-                    body: new FormData(document.getElementById("form-contact")),
+                    body: new FormData(document.getElementById("leads_form")),
                 }).then(
                     response => response.json()
                 ).then(
