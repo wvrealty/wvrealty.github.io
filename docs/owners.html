@@ -273,20 +273,22 @@
                                 <h4>Property Information</h4>
                             </div>
 
-                            <label class="pt-3">This Property is For (La propiedad es para):</label>
-                            <div>
-                                <input type="radio" id="forRent" name="data[for]" value="Rent" checked="checked">
-                                <label for="forRent" class="pb-1">Rent (Alquiler)</label>
+                            <div class="row d-block d-md-flex border mb-3">
+                                <label class="pt-3">This Property is For (La propiedad es para):</label>
+                                <div>
+                                    <input type="radio" id="forRent" name="data[for]" value="Rent" checked="checked">
+                                    <label for="forRent" class="pb-1">Rent (Alquiler)</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="forSale" name="data[for]" value="Sale">
+                                    <label for="forSale" class="pb-1">Sale (Venta)</label>
+                                </div>
+                                <div>   
+                                    <input type="radio" id="forBoth" name="data[for]" value="RTO">
+                                    <label for="forBoth" class="pb-3">Rent to Own (Alquiler con opción a compra)</label>
+                                </div>                        
                             </div>
-                            <div>
-                                <input type="radio" id="forSale" name="data[for]" value="Sale">
-                                <label for="forSale" class="pb-1">Sale (Venta)</label>
-                            </div>
-                            <div>   
-                                <input type="radio" id="forBoth" name="data[for]" value="RTO">
-                                <label for="forBoth" class="pb-3">Rent to Own (Alquiler con opción a compra)</label>
-                            </div>                        
-
+                            
                             <div class="row">
                                 <div class="col-12 col-md-6 form-group">
                                     <label for="bldg">Property Name (Nombre de la Propiedad):</label>
