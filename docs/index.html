@@ -634,6 +634,8 @@
                                     <label for="name">Name (Nombre):</label>
                                     <input type="text" name="data[name]" class="form-control" id="nameContact"
                                         placeholder="Answer" autocomplete="off" required>
+                                        
+                                    <input class="d-none" name="firstname" type="text" id="honey-pot">
                                 </div>
                                 <div class="col form-group">
                                     <label for="phone">Phone (Teléfono):</label>
@@ -810,6 +812,7 @@
     <script>
         var form = document.getElementById('leads_form');
         var answer = document.getElementById("questionSec");
+        var bot_sing_up = document.getElementById("honey-pot");
     
         form.addEventListener("submit", e => {
             e.preventDefault();
