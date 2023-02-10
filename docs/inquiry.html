@@ -167,6 +167,8 @@
                                     <label for="name"><b>Name (Nombre):</b></label>
                                     <input type="text" name="data[name]" class="form-control" id="nameContact"
                                         placeholder="Answer" autocomplete="off" required>
+
+                                    <input class="d-none" name="firstname" type="text" id="honeypot" value="positivo">
                                 </div>
                                 
                                 <div class="col form-group">
@@ -420,11 +422,12 @@
     <script>
         var form = document.getElementById('form-contact');
         var answer = document.getElementById("questionSec");
+        var botsignup = document.getElementById('honeypot');
     
         form.addEventListener("submit", e => {
             e.preventDefault();
             // This will fire if is not a bots
-            if (answer.value == "7") {
+            if (answer.value == "7" && botsignup.value == "positivo") {
                 fetch(form.action, {
                     method: "POST",
                     body: new FormData(document.getElementById("form-contact")),
